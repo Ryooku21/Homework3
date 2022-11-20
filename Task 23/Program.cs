@@ -10,4 +10,36 @@
 // 4 | 64
 // 5 | 125
 
-Console.Writeline("Введите натуральное число");
+
+Console.WriteLine("Введите натуральное число");
+int anyNumber = Convert.ToInt32(Console.ReadLine());
+
+void Cube(int num)
+{
+    if (num > 0)
+    {
+        int count = 1;
+        while (count <= num)
+        {
+            Console.WriteLine($"{count,5}   {count * count * count,5}");
+            count++;
+        }
+    }
+    else
+    if (num < 0)
+    {
+        int count = 1;
+        while (count >= num)
+        {
+            Console.WriteLine($"{count,5}      {count * count * count,5}");
+            count--;
+        }
+    }
+    else
+    if (num == 0)
+    {
+        Console.WriteLine("0 - некорректное значение, введите натуральное число!");
+    }
+}
+
+Cube(anyNumber);
